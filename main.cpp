@@ -47,9 +47,12 @@ bool getReturnMoney(float totalMoney, money_count* returnMoney) {
 
 
 int main(int argc, const char * argv[]) {
-    
+    float input = atof(argv[1]);
+    printf("input = %f\n", input);
+
     money_count returnMoney[TOTAL_MONEY_TYPE];
-    if(getReturnMoney(455000, returnMoney)==true) {
+
+    if(getReturnMoney(input, returnMoney)==true) {
         for(int i = 0; i<TOTAL_MONEY_TYPE; i++) {
             printf("お金 %d: %d 枚\n", returnMoney[i].money_type, returnMoney[i].count);
         }
