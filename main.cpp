@@ -48,6 +48,9 @@ bool getReturnMoney(float totalMoney, money_count* returnMoney) {
 
 int main(int argc, const char * argv[]) {
     float input = atof(argv[1]);
+    if(input == 0.0f) {
+    	return -1;
+    }
     printf("input = %f\n", input);
 
     money_count returnMoney[TOTAL_MONEY_TYPE];
